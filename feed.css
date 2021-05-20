@@ -226,7 +226,7 @@ a:hover {
   left: 540px;
   top: 90px;
 }
-.heart {
+/* .heart {
   background: none;
   border: none;
   background-image: url(./Images/Feed/heart\ 1.png);
@@ -235,7 +235,7 @@ a:hover {
   height: 20px;
   left: 800px;
   top: 225px;
-}
+} */
 .comment {
   border: none;
   background: none;
@@ -262,7 +262,7 @@ a:hover {
   display: none;
 }
 
-.popup .content {
+.popup .content-1 {
   position: fixed;
   border-radius: 40px;
   top: 50%;
@@ -277,9 +277,8 @@ a:hover {
   padding: 20px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  
 }
-.popup .content textarea {
+.popup .content-1 textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Roboto", sans-serif;
   border: 2px solid #bf764c;
@@ -305,11 +304,11 @@ a:hover {
   display: block;
 }
 
-.popup.active .content {
+.popup.active .content-1 {
   transition: all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
-.content button {
+.content-1 button {
   top: 20px;
   text-align: center;
   left: -200px;
@@ -323,7 +322,7 @@ a:hover {
   font-size: 12pt;
   font-weight: bold;
 }
-.content button:hover {
+.content-1 button:hover {
   background: #5f816e;
 }
 
@@ -365,7 +364,7 @@ a:hover {
   padding-left: 13%;
 }
 
-.heart {
+/* .heart {
   background: none;
   border: none;
   background-image: url(./Images/Feed/heart\ 1.png);
@@ -374,7 +373,7 @@ a:hover {
   height: 20px;
   left: 800px;
   top: 225px;
-}
+} */
 .comment {
   border: none;
   background: none;
@@ -390,25 +389,62 @@ a:hover {
 /* ตกแต่ง feed */
 
 @media only screen and (max-width: 800px) {
-
-    .SocialBox{
-        width: 100%;
-    }
-    .Picinpostbox {
-        width: 50px;
-        height: 50px;
-    }
-    .postmessage {
-        padding-top: 2%;
-        padding-left: 23%;
-      }
-    .name {
-        padding-left: 20%;
-    }
-    .fix{
-        top: 20%;
-    }
-    /* #ImgProfile{
+  .SocialBox {
+    width: 100%;
+  }
+  .Picinpostbox {
+    width: 50px;
+    height: 50px;
+  }
+  .postmessage {
+    padding-top: 2%;
+    padding-left: 23%;
+  }
+  .name {
+    padding-left: 20%;
+  }
+  .fix {
+    top: 20%;
+  }
+  /* #ImgProfile{
         top:20%;
     } */
 }
+
+/* Like */
+/* .heart-button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+.heart-active{
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+.heart{
+  position: absolute;
+  background: url("./Images/Feed/loveyou.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 17%;
+  left: 25%;
+  transform: translate(-50%,-50%);
+}
+
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
